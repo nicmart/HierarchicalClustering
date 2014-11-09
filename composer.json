@@ -1,0 +1,26 @@
+{
+    "name": "nicmart/hierarchical-clustering",
+    "type": "library",
+    "description": "Hierarchical Clustering library for PHP",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolò Martini",
+            "email": "nicmartnic@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "NicMart\\Clustering\\Hierarchical\\": "src/",
+            "NicMart\\Clustering\\Hierarchical\\Test\\": "tests"
+        }
+    }
+}
+
