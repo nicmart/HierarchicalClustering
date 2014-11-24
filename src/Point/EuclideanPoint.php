@@ -34,6 +34,12 @@ interface EuclideanPoint extends \IteratorAggregate
     public function sum(EuclideanPoint $point);
 
     /**
+     * @param float|int $lambda
+     * @return EuclideanPoint $point
+     */
+    public function times($lambda);
+
+    /**
      * @return static
      */
     public function opposite();

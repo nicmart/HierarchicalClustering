@@ -47,4 +47,25 @@ trait ClusterTrait
     {
         return count($this->points);
     }
+
+    /**
+     * Returns a new cluster which is the union of the current one and the passed one
+     *
+     * @param Cluster $that
+     * @return Cluster
+     */
+    public function merge(Cluster $that)
+    {
+        $newCluster = new static;
+
+        foreach ($this->getPoints() as $point) {
+            $newCluster->addPoint($point);
+        }
+
+        foreach ($that->getPoints() as $point) {
+            $newCluster->addPoint($point);
+        }
+
+        return $newCluster;
+    }
 } 

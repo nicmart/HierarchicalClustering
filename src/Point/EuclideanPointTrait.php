@@ -52,18 +52,23 @@ trait EuclideanPointTrait
         return new static($coordinates);
     }
 
+    public function times($lambda)
+    {
+        $coordinates = [];
+
+        foreach ($this->coordinates as $index => $coordinate) {
+            $coordinates[$index] = $coordinate * $lambda;
+        }
+
+        return new static($coordinates);
+    }
+
     /**
      * @return static
      */
     public function opposite()
     {
-        $coordinates = [];
-
-        foreach ($this->coordinates as $index => $coordinate) {
-            $coordinates[$index] = -$coordinate;
-        }
-
-        return new static($coordinates);
+        return $this->times(-1);
     }
 
     /**
